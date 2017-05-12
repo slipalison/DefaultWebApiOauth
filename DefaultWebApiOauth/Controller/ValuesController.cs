@@ -2,9 +2,10 @@
 
 namespace DefaultWebApiOauth.Controller
 {
+    [RoutePrefix("api/v1/Values")]
     public class ValuesController : ApiController
     {
-        [Authorize()]
+        [HttpGet]
         public string Get() => User.Identity.Name;
     }
 }
